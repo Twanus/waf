@@ -1,0 +1,41 @@
+version: '3'
+services:
+  juice-shop:
+    image: bkimminich/juice-shop
+    ports:
+      - 3000:3000
+    networks:
+      backend:
+        aliases:
+          - site
+      reverse-proxy:
+        aliases:
+          - juice
+
+  reverseproxy:
+    container_name: reverse-proxy-nginx
+    ports:
+      - '80:80'
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/proxy.conf:ro
+      - ./logs:/var/log/nginx:rw
+      - ./modsec_audit:/var/log/modsec_audit:rw
+      - ./modsec-override.conf:/etc/modsecurity.d/modsec-override.conf:ro
+    environment:
+      - PROXY=1
+      - MODSEC_AUDIT_LOG=/var/log/modsec_audit/modsec_audit.log
+      - MODSEC_DEBUG_LOG=/var/log/nginx/modsec_debug.log
+    user: "nginx"
+    restart: always
+    image: owasp/modsecurity-crs:nginx-alpine
+    networks:
+      reverse-proxy:
+        aliases:
+          - reverse-proxy-nginx
+
+networks:
+  backend:
+    external: true
+    name: backend
+  reverse-proxy:
+    external: true
