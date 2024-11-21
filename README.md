@@ -1,3 +1,5 @@
+# TEAM COOKERS: Antoon Vereecken, Wesley Van Hoof, Monowal Shrestha, Stanley Okomhen
+
 ### Verslag: Opzetten van een Web Application Firewall (WAF) met ModSecurity en Nginx
 
 #### Inleiding
