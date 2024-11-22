@@ -1,0 +1,266 @@
+[
+  {
+    "transaction": {
+      "client_ip": "172.18.0.1",
+      "time_stamp": "Fri Nov 22 18:13:38 2024",
+      "server_id": "fe3c5775ee95df80c49331fff20aee47acfbde0d",
+      "client_port": 57720,
+      "host_ip": "172.18.0.3",
+      "host_port": 80,
+      "unique_id": "173229921857.969081",
+      "request": {
+        "method": "POST",
+        "http_version": 1.1,
+        "uri": "/rest/user/login",
+        "headers": {
+          "Connection": "keep-alive",
+          "Content-Type": "application/json",
+          "Origin": "http://10.2.0.145",
+          "Referer": "http://10.2.0.145/",
+          "Accept-Encoding": "gzip, deflate",
+          "Cookie": "language=en; welcomebanner_status=dismiss",
+          "Accept-Language": "en-US,en;q=0.5",
+          "Accept": "application/json, text/plain, */*",
+          "Priority": "u=0",
+          "Content-Length": "37",
+          "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0",
+          "Host": "10.2.0.145"
+        }
+      },
+      "response": {
+        "body": "Invalid email or password.",
+        "http_code": 401,
+        "headers": {
+          "ETag": "W/\"1a-ARJvVK+smzAF3QQve2mDSG+3Eus\"",
+          "Feature-Policy": "payment 'self'",
+          "Date": "Fri, 22 Nov 2024 18:13:38 GMT",
+          "X-Recruiting": "/#/jobs",
+          "Access-Control-Allow-Origin": "*",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Frame-Options": "SAMEORIGIN",
+          "Connection": "keep-alive",
+          "X-Content-Type-Options": "nosniff",
+          "X-Content-Type-Options": "nosniff",
+          "Content-Type": "text/html; charset=utf-8",
+          "Content-Length": "26",
+          "Server": "nginx",
+          "Vary": "Accept-Encoding",
+          "X-XSS-Protection": "1; mode=block",
+          "Referrer-Policy": "no-referrer-when-downgrade",
+          "Content-Security-Policy": "default-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data:;"
+        }
+      },
+      "producer": {
+        "modsecurity": "ModSecurity v3.0.13 (Linux)",
+        "connector": "ModSecurity-nginx v1.0.3",
+        "secrules_engine": "Enabled",
+        "components": ["OWASP_CRS/4.8.0\""]
+      },
+      "messages": [
+        {
+          "message": "Host header is a numeric IP address",
+          "details": {
+            "match": "Matched \"Operator `Rx' with parameter `(?:^([\\d.]+|\\[[\\da-f:]+\\]|[\\da-f:]+)(:[\\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `10.2.0.145' )",
+            "reference": "o0,10o0,10v37,10",
+            "ruleId": "920350",
+            "file": "/etc/modsecurity.d/owasp-crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf",
+            "lineNumber": "772",
+            "data": "10.2.0.145",
+            "severity": "4",
+            "ver": "OWASP_CRS/4.8.0",
+            "rev": "",
+            "tags": [
+              "modsecurity",
+              "application-multi",
+              "language-multi",
+              "platform-multi",
+              "attack-protocol",
+              "paranoia-level/1",
+              "OWASP_CRS",
+              "capec/1000/210/272",
+              "PCI/6.5.10"
+            ],
+            "maturity": "0",
+            "accuracy": "0"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "transaction": {
+      "client_ip": "172.18.0.1",
+      "time_stamp": "Fri Nov 22 18:13:38 2024",
+      "server_id": "fe3c5775ee95df80c49331fff20aee47acfbde0d",
+      "client_port": 57724,
+      "host_ip": "172.18.0.3",
+      "host_port": 80,
+      "unique_id": "173229921891.751134",
+      "request": {
+        "method": "POST",
+        "http_version": 1.1,
+        "uri": "/rest/user/login",
+        "headers": {
+          "Connection": "keep-alive",
+          "Content-Type": "application/json",
+          "Origin": "http://10.2.0.145",
+          "Referer": "http://10.2.0.145/",
+          "Accept-Encoding": "gzip, deflate",
+          "Cookie": "language=en; welcomebanner_status=dismiss",
+          "Accept-Language": "en-US,en;q=0.5",
+          "Accept": "application/json, text/plain, */*",
+          "Priority": "u=0",
+          "Content-Length": "38",
+          "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0",
+          "Host": "10.2.0.145"
+        }
+      },
+      "response": {
+        "body": "Invalid email or password.",
+        "http_code": 401,
+        "headers": {
+          "ETag": "W/\"1a-ARJvVK+smzAF3QQve2mDSG+3Eus\"",
+          "Feature-Policy": "payment 'self'",
+          "Date": "Fri, 22 Nov 2024 18:13:38 GMT",
+          "X-Recruiting": "/#/jobs",
+          "Access-Control-Allow-Origin": "*",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Frame-Options": "SAMEORIGIN",
+          "Connection": "keep-alive",
+          "X-Content-Type-Options": "nosniff",
+          "X-Content-Type-Options": "nosniff",
+          "Content-Type": "text/html; charset=utf-8",
+          "Content-Length": "26",
+          "Server": "nginx",
+          "Vary": "Accept-Encoding",
+          "X-XSS-Protection": "1; mode=block",
+          "Referrer-Policy": "no-referrer-when-downgrade",
+          "Content-Security-Policy": "default-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data:;"
+        }
+      },
+      "producer": {
+        "modsecurity": "ModSecurity v3.0.13 (Linux)",
+        "connector": "ModSecurity-nginx v1.0.3",
+        "secrules_engine": "Enabled",
+        "components": ["OWASP_CRS/4.8.0\""]
+      },
+      "messages": [
+        {
+          "message": "Host header is a numeric IP address",
+          "details": {
+            "match": "Matched \"Operator `Rx' with parameter `(?:^([\\d.]+|\\[[\\da-f:]+\\]|[\\da-f:]+)(:[\\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `10.2.0.145' )",
+            "reference": "o0,10o0,10v37,10",
+            "ruleId": "920350",
+            "file": "/etc/modsecurity.d/owasp-crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf",
+            "lineNumber": "772",
+            "data": "10.2.0.145",
+            "severity": "4",
+            "ver": "OWASP_CRS/4.8.0",
+            "rev": "",
+            "tags": [
+              "modsecurity",
+              "application-multi",
+              "language-multi",
+              "platform-multi",
+              "attack-protocol",
+              "paranoia-level/1",
+              "OWASP_CRS",
+              "capec/1000/210/272",
+              "PCI/6.5.10"
+            ],
+            "maturity": "0",
+            "accuracy": "0"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "transaction": {
+      "client_ip": "172.18.0.1",
+      "time_stamp": "Fri Nov 22 18:13:38 2024",
+      "server_id": "fe3c5775ee95df80c49331fff20aee47acfbde0d",
+      "client_port": 57736,
+      "host_ip": "172.18.0.3",
+      "host_port": 80,
+      "unique_id": "173229921888.046173",
+      "request": {
+        "method": "POST",
+        "http_version": 1.1,
+        "uri": "/rest/user/login",
+        "headers": {
+          "Connection": "keep-alive",
+          "Content-Type": "application/json",
+          "Origin": "http://10.2.0.145",
+          "Referer": "http://10.2.0.145/",
+          "Accept-Encoding": "gzip, deflate",
+          "Cookie": "language=en; welcomebanner_status=dismiss",
+          "Accept-Language": "en-US,en;q=0.5",
+          "Accept": "application/json, text/plain, */*",
+          "Priority": "u=0",
+          "Content-Length": "38",
+          "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0",
+          "Host": "10.2.0.145"
+        }
+      },
+      "response": {
+        "body": "Invalid email or password.",
+        "http_code": 401,
+        "headers": {
+          "ETag": "W/\"1a-ARJvVK+smzAF3QQve2mDSG+3Eus\"",
+          "Feature-Policy": "payment 'self'",
+          "Date": "Fri, 22 Nov 2024 18:13:38 GMT",
+          "X-Recruiting": "/#/jobs",
+          "Access-Control-Allow-Origin": "*",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Frame-Options": "SAMEORIGIN",
+          "Connection": "keep-alive",
+          "X-Content-Type-Options": "nosniff",
+          "X-Content-Type-Options": "nosniff",
+          "Content-Type": "text/html; charset=utf-8",
+          "Content-Length": "26",
+          "Server": "nginx",
+          "Vary": "Accept-Encoding",
+          "X-XSS-Protection": "1; mode=block",
+          "Referrer-Policy": "no-referrer-when-downgrade",
+          "Content-Security-Policy": "default-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data:;"
+        }
+      },
+      "producer": {
+        "modsecurity": "ModSecurity v3.0.13 (Linux)",
+        "connector": "ModSecurity-nginx v1.0.3",
+        "secrules_engine": "Enabled",
+        "components": ["OWASP_CRS/4.8.0\""]
+      },
+      "messages": [
+        {
+          "message": "Host header is a numeric IP address",
+          "details": {
+            "match": "Matched \"Operator `Rx' with parameter `(?:^([\\d.]+|\\[[\\da-f:]+\\]|[\\da-f:]+)(:[\\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `10.2.0.145' )",
+            "reference": "o0,10o0,10v37,10",
+            "ruleId": "920350",
+            "file": "/etc/modsecurity.d/owasp-crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf",
+            "lineNumber": "772",
+            "data": "10.2.0.145",
+            "severity": "4",
+            "ver": "OWASP_CRS/4.8.0",
+            "rev": "",
+            "tags": [
+              "modsecurity",
+              "application-multi",
+              "language-multi",
+              "platform-multi",
+              "attack-protocol",
+              "paranoia-level/1",
+              "OWASP_CRS",
+              "capec/1000/210/272",
+              "PCI/6.5.10"
+            ],
+            "maturity": "0",
+            "accuracy": "0"
+          }
+        }
+      ]
+    }
+  }
+]
