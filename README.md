@@ -16,6 +16,12 @@ Een Web Application Firewall (WAF) beschermt webapplicaties door HTTP-verzoeken 
    - De `docker-compose.yml` file definieert de services en netwerken. De `reverseproxy` service gebruikt het `owasp/modsecurity-crs:nginx-alpine` image om Nginx en ModSecurity te draaien.
    - Volumes worden gemount voor configuratiebestanden en logbestanden.
 
+   **Voeg networks toe in docker**
+   ```
+   docker network create backend
+   docker network create reverse-proxy
+   ```
+
 2. **Nginx Configuratie**:
    - De `default.conf` file configureert de Nginx server om te luisteren op poort 80 en definieert proxy-instellingen voor de `juice-shop` applicatie.
    - Beveiligingsheaders worden toegevoegd om de beveiliging van de applicatie te verbeteren.
