@@ -47,11 +47,12 @@
 
   ### Een log entry (of een screenshot hiervan) van de WAF waaruit duidelijk blijkt dat er een aanval werd tegengehouden;
 
-
+  <img src="brute_force_kali.png" alt="alt text" width="400"/>
 
   ### Een uitleg waarom de WAF-regel al dan niet werkt;
 
-  Tijdens een manuele
+  Hoewel we wanneer we het wachtwoord raden dat in ook in 'rockyou' staat, we Forbidden terugkrijgen, hebben we vrij weinig vertrouwen dat deze regel werkt.
+
 
 # 2. SQL injection;
   ### De input die je gebruikt om de WAF-regel te testen;
@@ -175,13 +176,11 @@
 
   We hebben een VPS in Brazilie gebruikt dus de request werd geblokkeerd.
 
-# 5. Blokkeren van ‘repeat offenders’
+# 6. Blokkeren van ‘repeat offenders’
   ### De input die je gebruikt om de WAF-regel te testen;
 
-  ```bash
-    curl -v http://example.com
-  ``` 
-
+  Zie [Brute Force](#1-brute-force)
+  
   ### De WAF-regel die de aanval zou moeten blokkeren;
 
   ```bash
@@ -190,4 +189,9 @@
   ```
 
   ### Een log entry (of een screenshot hiervan) van de WAF waaruit duidelijk blijkt dat er een aanval werd tegengehouden;
+
+  Zie [Brute Force](#1-brute-force)
+
   ### Een uitleg waarom de WAF-regel al dan niet werkt;
+  
+  Zie [Brute Force](#1-brute-force)
