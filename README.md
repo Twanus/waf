@@ -243,3 +243,10 @@ Het opzetten van een WAF met ModSecurity en Nginx biedt een robuuste beveiliging
   ### Een uitleg waarom de WAF-regel al dan niet werkt;
   
   Zie [Brute Force](#1-brute-force)
+
+
+--------------------------------
+
+### 3. Threatmodel
+
+![threat_diagram](threat_diagram.png)
